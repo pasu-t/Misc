@@ -1,0 +1,3 @@
+Notification Plugin          -> Allows sending notification in JSON and XML formats
+Extreme Notification Plugin  -> notifies via Web Hook
+Email-ext Plugin             -> Customized email like who should recieve it and what it says

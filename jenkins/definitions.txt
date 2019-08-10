@@ -1,0 +1,8 @@
+Jenkins:
+-> jenkins is an Open Source java application.
+-> It is an automation server which can be used to automate all sorts of tasks like building, testing and deployment.
+
+pipeline : 
+-> is a workflow with a group of events or jobs that are chained and integrated with each other in sequence
+-> Every job in a pipeline has some dependancy on one or more other jobs
+-> every pipe will have inlet and outlet. Pipeline consists of multiple sections of a pipe and also it can have multiple inlets and outlet. 

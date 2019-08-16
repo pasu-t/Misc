@@ -10,14 +10,14 @@ pipeline :
 -> Two types
     -> Scripted pipeline: Traditional way of writing the code. 
                         Code is written on the Jenkins UI instance
-					    Code is defined within pipeline block
-					    It is a user definde block which contains all the stages
+			Code is defined within node block
+			A node is machine that executes the entire workflow 	    
 
     -> Declarative pipeline: Recent feature. 
                          Simpler groovy syntax. 
 						 Code is written locally and is checked into VCS.
-						 Code is defined within node block
-						 A node is machine that executes the entire workflow 
+						 Code is defined within pipeline block
+					         It is a user definde block which contains all the stages
 						 
  -> Agent: instructs jenkins to allocate an executor for the builds.It is defined for entire pipeline or specific stage
  

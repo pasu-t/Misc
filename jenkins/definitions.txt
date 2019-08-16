@@ -15,9 +15,9 @@ pipeline :
 
     -> Declarative pipeline: Recent feature. 
                          Simpler groovy syntax. 
-						 Code is written locally and is checked into VCS.
-						 Code is defined within pipeline block
-					         It is a user definde block which contains all the stages
+			 Code is written locally and is checked into VCS.
+			 Code is defined within pipeline block
+			 It is a user definde block which contains all the stages
 						 
  -> Agent: instructs jenkins to allocate an executor for the builds.It is defined for entire pipeline or specific stage
  

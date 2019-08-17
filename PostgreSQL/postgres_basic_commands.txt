@@ -24,10 +24,12 @@ CREATE TABLE PUBLIC."earthquake"(
 	network_id varchar,
 	place varchar,
 	cause varchar)
-
+========================================================================================================
 SELECT * FROM earthquake;
 COPY PUBLIC."earthquake" from 'C:\workspace\myTools\PostgreSQL\earthquake.csv' DELIMITER ',' CSV HEADER;
 SELECT * FROM earthquake;
+SELECT * FROM earthquake
+LIMIT 1;
 SELECT COUNT(*) FROM earthquake;
 SELECT magnitude,place,occurred_on FROM earthquake;
 
@@ -56,6 +58,9 @@ FROM earthquake;
 SELECT cause
 FROM earthquake;
 
+SELECT DISTINCT cause
+FROM earthquake;
+
 SELECT COUNT(*)
 FROM earthquake
 WHERE cause = 'earthquake';
@@ -79,7 +84,24 @@ SELECT COUNT(*)
 FROM earthquake
 WHERE place LIKE '%Honshu%Japan%'
     AND occurred_on BETWEEN '2011-03-11' AND '2011-03-18';
+========================================================================================================
+#Assuming chatter is simple social network with mainly three tables chitter-user, chitter_post, chitter_follower
+CREATE TABLE PUBLIC.chitter_user(
+	user_id varchar, 
+	username varchar,
+	encrypted_password varchar,
+	email varchar, 
+	date_joined varchar)
 
+INSERT INTO chitter_user
+    (user_id, username,encrypted_password, email, date_joined)
+VALUES
+    (DEFAULT, 'firstuser','askdj8923424f843874', 'fake@fake.fake', '2018-02-20' )
 
+verify: SELECT * FROM chitter-user
 
+CREATE TABLE PUBLIC.chitter_post(
+	post_id varchar, 
+	user_id varchar,
+	
 

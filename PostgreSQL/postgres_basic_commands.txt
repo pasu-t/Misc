@@ -103,5 +103,76 @@ verify: SELECT * FROM chitter-user
 CREATE TABLE PUBLIC.chitter_post(
 	post_id varchar, 
 	user_id varchar,
-	
+========================================================================================================
 
+CREATE TABLE PUBLIC.secret_user(
+	user_id int, 
+	first_name varchar,
+	second_name varchar,
+	code_name varchar, 
+	country varchar,
+	organization varchar,
+	salary int,
+	knows_kung_fu boolean)
+
+UPDATE secret_user
+SET first_name = pasupathi
+WHERE user_id = 4;
+
+UPDATE table_name
+SET column1 = value1,
+	column2 = value2,
+	.....
+WHERE conditions;
+
+#if you do not include where clause , the change will be applied to every row in the table1
+
+UPDATE secret_user
+SET salary = 115000
+WHERE organization = CI;
+
+UPDATE secret_user
+SET knows_kung_fu = TRUE
+WHERE user_id IN (5,7,8);
+
+#10% hike for all users(do not need WHERE clause)
+UPDATE secret_user
+SET salary = 1.1*salary;
+
+#combined salary
+SELECT SUM(salary)
+FROM secret_user;
+=======================================================================================================
+
+CREATE TABLE PUBLIC.song(
+	song_id int, 
+	title varchar,
+	artist varchar,
+	album varchar, 
+	year_released int,
+	duration numeric,
+	tempo numeric,
+	loudness numeric)
+
+COPY PUBLIC.song from 'C:\workspace\myTools\PostgreSQL\songs.csv' DELIMITER ',' CSV HEADER;
+
+SELECT MIN(year_released), MAX(year_released)
+FROM song;
+
+SELECT DISTINCT year_released
+FROM song
+ORDER BY year_released;
+
+SELECT COUNT(*) FROM song
+WHERE year_released=0;
+
+DELETE FROM song
+WHERE year_released=0;
+
+DELETE FROM table_name
+WHERE condition(s);
+#delete the rows not columns. if no WHERE clause, all rows will be deleted.
+
+SELECT MIN(loudness), MAX(loudness)
+FROM song;
+======================================================================================================

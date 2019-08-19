@@ -175,4 +175,12 @@ WHERE condition(s);
 
 SELECT MIN(loudness), MAX(loudness)
 FROM song;
+
+DELETE FROM song
+WHERE loudness>0;
+
+SELECT year_released, ROUND(AVG(tempo))
+FROM song
+GROUP BY year_released
+ORDER BY year_released;
 ======================================================================================================

@@ -1,0 +1,62 @@
+CREATE TABLE PUBLIC.martian(
+	martian_id int,
+	first_name varchar,
+	last_name varchar,
+	base_id int,
+	super_id int);
+
+INSERT INTO martian
+    (martian_id, first_name,last_name, base_id, super_id)
+VALUES
+    (1, 'Rey', 'Jaffa', 1, null),
+	(2, 'John', 'Cobra', 4, 10),
+	(3, 'Sam', 'Link', 4, 2),
+	(4, 'Sala','Meri', 1, 9),
+	(5, 'Elma', 'Menta',2, 12),
+	(6, 'Melisa', 'Les', 3, 8),
+	(7, 'Elu', 'Malai', 1, 1),
+	(8, 'Mark', 'Watney',1, null),
+	(9, 'Beth', 'jonshan', 1, 1),
+	(10, 'Chris', 'Ber', 4, null);
+
+CREATE TABLE PUBLIC.base(
+	base_id int,
+	base_name varchar,
+	founded date);
+
+INSERT INTO base
+    (base_id, base_name, founded)
+VALUES
+    (1, 'Tharsisland', '2037-06-03'),
+	(2, 'Valles Marineris 2.0', '2048-12-01'),
+	(3, 'Gale Cratertown', '2041-05-04'),
+	(4, 'New New York', '2042-02-02'),
+	(5, 'Olympus Mons spa & Casino', null);
+
+SELECT *
+FROM martian
+INNER JOIN base
+ON martian.base_id = base.base_id; # ON clause specify both table name and column name.
+
+SELECT martian_id, base_id, base_name
+FROM martian
+INNER JOIN base
+ON martian.base_id = base.base_id;
+
+SELECT m.martian_id, b.base_id, b.base_name
+FROM martian AS m
+INNER JOIN base AS b
+ON m.base_id = b.base_id;
+
+SELECT column1,column2...
+FROM martian
+_____ JOIN base
+ON martian.base_id = base.base_id;
+WHERE condition(s)
+ORDER BY value;
+
+INNER Join --> only returns connected and matched rows
+LEFT Join --> Return all connected rows and unconnected rows from left table(nulls in right)
+RIGHT Join --> Return all connected rows and unconnected rows from right table(nulls in left)
+FULL Join --> Return all connected rows and unconnected rows from both left and right tables
+

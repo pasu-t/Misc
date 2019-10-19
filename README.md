@@ -1,2 +1,2 @@
 # myTools
-Installation and setting up environment for useful tools
+Tools that we use in Software Engineering

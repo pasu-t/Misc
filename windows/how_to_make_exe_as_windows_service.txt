@@ -1,0 +1,13 @@
+To create a Windows Service from an executable, you can use sc.exe:
+
+sc.exe create <new_service_name> binPath= "<path_to_the_service_executable>"
+
+You must have quotation marks around the actual exe path, and a space after the binPath=.
+
+More information on the sc command can be found in Microsoft KB251192.
+
+Note that it will not work for just any executable: the executable must be a Windows Service (i.e. implement ServiceMain). When registering a non-service executable as a service, you'll get the following error upon trying to start the service:
+
+    Error 1053: The service did not respond to the start or control request in a timely fashion.
+
+There are tools that can create a Windows Service from arbitrary, non-service executables, see the other answers for examples of such tools.

@@ -1,0 +1,4 @@
+
+https://jenkins.io/doc/pipeline/steps/
+
+https://github.com/codetojoy/talk_maritimedevcon_groovy/blob/master/exampleB_REST_Client/v2_groovy/RESTClient.groovy

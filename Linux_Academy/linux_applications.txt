@@ -1,0 +1,23 @@
+Desktop Applications:
+=====================
+OpenOffice
+LibreOffice
+Firefox (thunderbird)
+gimp (graphics->images etc)
+
+Server Applications:
+====================
+Apache HTTP Server
+NGINX HTTP Server (also act as proxy, load balancer etc)
+MySQL
+MariaDB (fork of MySQL)
+
+File Sharing Applications:
+=========================
+Samba (better suited for local network)
+NFS (Network File System -> suited for shared resources)
+
+Private Cloud Applications:
+===========================
+ownCloud (like dropbox but files are stored on own connected hardware)
+NextCloud (fork of ownCloud)

@@ -1,0 +1,8 @@
+tar xzf htop-2.2.0.tar.gz
+cd htop-2.2.0.tar.gz
+ls
+./configure
+make
+sudo make install
+htop
+sudo make uninstall

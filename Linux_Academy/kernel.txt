@@ -1,0 +1,2 @@
+The linux kernel is a free and open-source operating system kernel.
+It is a framework that connects the application layer to the hardware of the computer.

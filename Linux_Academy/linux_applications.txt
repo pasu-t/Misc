@@ -3,7 +3,7 @@ Desktop Applications:
 OpenOffice
 LibreOffice
 Firefox (thunderbird)
-gimp (graphics->images etc)
+GIMP (graphics->images etc)
 
 Server Applications:
 ====================

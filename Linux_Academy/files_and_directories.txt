@@ -1,0 +1,17 @@
+cd - -> go back
+cd ~ -> home directory
+cd \ -> heighest heirarcy level of file system
+
+touch .file ->create hidden file
+
+#oldest file in var/log
+ls -lAt var/log
+#largest file in var/log
+ls lS var/log
+#when was last time file was modified
+
+# wc - print newline, word, and byte counts for each file
+wl -l log.txt -> tells how many lines
+wl -L log.txt -> tells max display width
+wl -m log.txt -> tells how many characters
+

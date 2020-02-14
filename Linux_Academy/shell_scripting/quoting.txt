@@ -1,0 +1,26 @@
+Escape charater: \
+
+single quote: preserve literal value of every character contained within the quotes, including escape character
+
+double qoute: preserve liter value of most of the characters contained within the qoutes exceptions include $, single quote and \ 
+
+# Set variable1 to This is 'just' a "test".
+variable1="This is 'just' a \"test\""
+# Write the variable to a new file named value.txt.
+echo -e $variable1 > value.txt
+
+# Set variable2 to This is a backslash "\" and this is a single quote '.
+variable2="This is a backslash \"\\\" and this is a single quote '."
+# Append variable2 to the value.txt file.
+echo -e $variable2 >> value.txt
+
+# Set variable3 to 3 double quotes """, and 3 single quotes ''', and three backslashes \\\.
+variable3="3 double quotes \"\"\", and 3 single quotes ''', and 3 backslashes \\\\\\\\\."
+# Append variable3 to the value.txt file.
+echo -e $variable3 >> value.txt
+
+# Set variable4 to This is what a newline character looks like \n, it will create a new line.
+variable4="This is what a newline character looks like \\\n, it will create a new line."
+# sAppend variable4 to the value.txt file.
+echo -e $variable4 >> value.txt
+

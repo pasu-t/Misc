@@ -1,3 +1,11 @@
+#############################
+cat /etc/*release
+cat /etc/*issue*
+lsb_release -a
+hostnamectl
+cat /etc/redhat-release
+#############################
+
 apt-get    -> adanced package tool which installs dpkg(debian pkg) for debain based systems
 yum        -> yellowdog updater which installs rpm(redhat pkg mgmt) for redhat based systems
 
@@ -7,9 +15,22 @@ sudo rpm -e htop
 sudo dpkg -i htop-2.2.0.rpm
 sudo dpkg -e htop
 
-cat /etc/redhat-release
-last       -> to check last login and last reboot
-man <cmnd> -> documentation of the command
+last        -> to check last login and last reboot
+w -> Show who is logged on and what they are doing.
+man <cmnd>  -> documentation of the command
+info <cmnd> -> more detailed info than man
+/ -> search
+
+echo $? -> exit status of previuos cmnd
+env -> envrmnt variables
+# add path to env variable path
+echo $PATH
+PATH="$PATH:$HOME/scripts"
+echo $PATH
+source .profile
+echo "PATH=$PATH:$HOME/scripts" >> .profle
+echo $PATH
+
 
 
 

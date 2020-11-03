@@ -1,0 +1,9 @@
+Moving Around:
+gg   -> go to first line of the file
+G    -> go to last line of the file
+10G  -> 10th line
+
+Inserting text:
+i ->insert at the cursor
+I ->insert at start of line
+o ->append line under cursor

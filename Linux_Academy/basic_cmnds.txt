@@ -16,6 +16,7 @@ sudo dpkg -i htop-2.2.0.rpm
 sudo dpkg -e htop
 
 last        -> to check last login and last reboot
+!cat -> prev output of cat
 w -> Show who is logged on and what they are doing.
 man <cmnd>  -> documentation of the command
 info <cmnd> -> more detailed info than man
@@ -31,6 +32,10 @@ source .profile
 echo "PATH=$PATH:$HOME/scripts" >> .profle
 echo $PATH
 
+Partition Mount points: /etc/fstab
+user attributes: /etc/passwd
+Groups: /etc/group
+Hosts File: /etc/hosts
 
 
 

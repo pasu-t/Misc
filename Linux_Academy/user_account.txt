@@ -1,0 +1,36 @@
+# Determine What Groups sysuser Belongs To
+id sysuser
+groups sysuser
+cat /etc/group | grep sysuser
+
+# Determine sysuser’s Home Directory
+getent passwd sysuser
+cat /etc/passwd | grep sysuser
+
+# Determine sysuser’s Login Shell
+getent passwd sysuser
+cat /etc/passwd | grep sysuser
+
+
+# Create the Required Users
+for i in jen william matt sam anne danny kate bruce; do sudo useradd -m $i; done
+
+# Create the Required Groups
+sudo groupadd management
+sudo groupadd sales
+sudo groupadd operations
+
+# Add Members to the Appropriate Groups
+# Add jen to all groups.
+for i in management sales operations ; do sudo usermod -a -G $i jen; done
+# Add william to all groups.
+for i in management sales operations ; do sudo usermod -a -G $i william; done
+# Add the users matt, sam, anne, and danny to the sales group.
+for i in matt sam anne danny; do sudo usermod -a -G sales $i; done
+# Add the users kate and bruce to the operations group.
+for i in kate bruce; do sudo usermod -a -G operations $i; done
+
+# Run one of the following commands to verify that group membership has been configured correctly for all users:
+tail -n3 /etc/group
+or
+for i in jen william matt sam anne danny kate bruce; do groups $i; done

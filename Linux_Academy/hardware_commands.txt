@@ -1,0 +1,24 @@
+# determine how much storage is available
+df -h
+
+# Number of CPUs/Cores
+sudo lshw
+cat /proc/cpuinfo
+lscpu
+
+#determine CPU speed
+sudo lshw
+cat /proc/cpuinfo
+
+#Determine How Much RAM Is Installed
+sudo lshw
+cat /proc/meminfo
+sudo dmidecode
+
+# Determine How Much Swap Is Being Used (swap is the harddisk memory utilized if RAM space exceeds)
+free -m
+
+#BIOS Version
+sudo lshw
+sudo dmidecode
+

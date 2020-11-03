@@ -1,0 +1,10 @@
+# Attempt to curl local host
+curl -I localhost
+
+# how many times 10.0.0.10 has accessed the site
+sudo cat /var/log/httpd/access_log | grep -E "^10.0.0.10" | wc -l
+
+#find new log entry
+sudo tail -f /var/log/httpd/access_log
+
+#

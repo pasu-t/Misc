@@ -1,0 +1,30 @@
+ip route show
+ip addr show
+netstat
+netstat -tlnp (tcp listening port numbers)
+ss
+ss -tlnp
+ss -ulnp
+nmcli
+
+# Determine the DNS Server
+cat /etc/resolv.conf | grep nameserver
+
+
+# Determine the Configured DNS Host
+cat /etc/resolv.conf
+
+# Perform a DNS Lookup of www.linuxacademy.com Using the Configured DNS Server
+host www.linuxacademy.com
+dig www.linuxacademy.com
+
+# Perform a DNS Lookup of www.linuxacademy.com Using Another DNS Host
+dig @1.1.1.1 www.linuxacademy.com
+host www.linuxacademy.com 1.1.1.1
+
+# Test Connectivity to www.linuxacademy.com
+Try ping:
+ping -c1 www.linuxacademy.com
+
+Then curl:
+curl -I www.linuxacademy.com

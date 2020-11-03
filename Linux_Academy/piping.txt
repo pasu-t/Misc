@@ -1,0 +1,25 @@
+cat /etc/passwd | grep root
+cat /etc/passwd | grep root | cut -d: -f6
+cat /etc/passwd | grep root | wc -l
+#outputing to file
+cat american-dictionary | grep Apple > apple_results.txt
+cat american-dictionary | grep Ball >> apple_results.txt
+cat apple_results.txt | sort > sorted.txt
+#outputing from file
+grep Apple sorted.txt 
+(or)
+cat sorted.txt | grep Ball
+
+cat american-dictionary | grep -E "Apple"
+cat american-dictionary | grep -E "Apple|Ball"
+cat american-dictionary | grep -E "^seed"
+cat american-dictionary | grep -E "Ap?le"
+cat american-dictionary | grep -E "Ap[p-z]le"
+
+
+
+
+
+
+
+

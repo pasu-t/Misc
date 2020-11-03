@@ -1,0 +1,22 @@
+if [<sometest>]
+then
+ <commands>
+fi
+
+![expression]       expression is false
+-n[string]          length of string is greater than zero
+-z[string]          length of string zero
+str1 = str2
+str1 != str2
+int1 -eq int2
+int1 -gt int2
+int1 -lt int2
+-d{file}            the file exists and is a directory
+-e{file}            the file exists
+-r{file}            the file exists and read permission is granted
+-s{file}            the file exists and its size is greater than zero
+-w{file}            the file exists and write permission is granted
+-x{file}            the file exists and execution permission is granted
+
+
+

@@ -1,0 +1,9 @@
+differentiate break, continue and pss
+list vs tuple (memory management)
+
+what is cunstructor and destructor?
+what is __init__ ?
+why __main__ ?
+what is lamda, map and filter?
+string slicing possible? if so what happens to original string? (immutable)
+object vs variable?

@@ -1,0 +1,22 @@
+gzip: the default compression used by tar via (-z), a good balance of speed and reduction
+tar czf archive.tar file*
+bzip2: an alternative, typically slower than gzip to higher compressions(large videos,audios)
+tar cjf archive.tgz file*
+zip: algorithm used by zip cmd, all-in-one and popular in other OS's
+zip -r archive.zip file*
+# to create a tarball of the ~/Practice folder named archive.tar:
+tar cvf archive.tar Practice/
+
+# to add the file ~/extra.txt to the existing tarball:
+tar rf archive.tar extra.txt
+
+# Now create another tarball, but this time, compress it during creation 
+tar czf archive.tgz Practice/
+
+# Use the gzip utility to compress the first tarball (archive.tar) with maximum compression:
+gzip -9 archive.tar
+This will compress the file and rename it archive.tar.gz.
+
+# to extract the file Practice/Test/version.txt from the compressed archive archive.tar.gz:
+tar xzf archive.tar.gz Practice/Test/version.txt
+# This will extract the file to the existing path and overwrite the file if it exists.

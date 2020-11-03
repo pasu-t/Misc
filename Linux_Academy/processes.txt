@@ -1,0 +1,15 @@
+Process data stored in /proc/ within individual /<PID> folders
+
+ps aux -> list of processes(BSD format)
+ps -eF -> list of processes(linux format)
+
+# No.of processes running
+ps aux | wc -l
+
+# Current load on the system
+cat proc/loadavg
+uptime
+
+# Number of processes running as user1
+ps -U user | wc -l
+

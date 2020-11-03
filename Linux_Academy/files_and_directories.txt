@@ -1,8 +1,8 @@
 cd - -> go back
 cd ~ -> home directory
-cd \ -> heighest heirarcy level of file system
+cd \ -> to the heighest heirarcy level of file system
 
-touch .file ->create hidden file
+touch .file -> create hidden file
 
 #oldest file in var/log
 ls -lAt var/log
@@ -14,4 +14,55 @@ ls lS var/log
 wl -l log.txt -> tells how many lines
 wl -L log.txt -> tells max display width
 wl -m log.txt -> tells how many characters
+
+#create new directory
+mkdir
+mkdir -p dir/subdir
+#copy directory
+cp -r <source> <destination>
+#move a directory
+mv <source> <destination>
+#delete a direcotry
+rm -r <directory>
+
+#create new file
+touch <NAME>
+cp -r <source> <destination>
+#move a file
+mv <file> <NEW LOCATION>
+#rm file
+rm <file>
+
+#Remove etc/selinux/.
+rm -rf etc/selinux/
+#Remove var/log/boot.log.
+rm -rf var/log/boot.log
+#Remove anything in proc/ that is or starts with a number.
+rm -rf proc/[1-9]*
+#Remove anything in etc/ that ends in .conf.
+rm -rf etc/*.conf
+#Remove anything in sys/module that starts with ip6t.
+rm -rf sys/module/ip6t*
+
+# Number of Files and Folders in `/usr/share`
+ls /usr/share/ | wc -l
+
+# Number of Unpacked Entries in `/var/log/dpkg.log`
+cat /var/log/dpkg.log | grep unpacked | wc -l
+
+# How Many Words Start with the Letter "x"
+cat /usr/share/dict/words | grep -E "^x" | wc -l
+
+# Which Word Starts with "l", Ends in "x", and Contains 5 Characters Total
+cat /usr/share/dict/words | grep -E "^l...$x"
+
+#How Many 3-Letter Words Start with the Letters "y" or "z"
+cat /usr/share/dict/words | grep -E "^y..$|^x..$" |wc -l
+
+#temp file 
+/tmp
+all content in /tmp is cleared upon system reboot
+/var/tmp
+Clear every 30 days (depending on distro)
+mktemp ->create ad hoc files
 

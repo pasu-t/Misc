@@ -7,5 +7,7 @@
 	-n Displays addresses and port numbers in numerical form.
 	-o Displays the owning process ID associated with each connection.
 
-#
+#to kill the process
+taskkill /F /T /IM chromedriver.exe
+taskkill /F /T /IM geckodriver.exe
 

@@ -1,0 +1,25 @@
+Maxlinear
+
+@first round
+legacy ps vs wmmps?
+how rouge AP detection works?
+how random back off algorithm works? what is the necessity of it.
+active vs passive scan
+11n mcs index?
+
+#second round
+CSMA
+how client connects to AP? Packet exchange?
+4 way handshake in psk?
+wmmps 
+EDCA vs DCF
+how voice gets prioratized over other?
+when SIFS is used? what is AIFS?
+for what features you have written testplans?
+
+Python:
+using with context manager, file reading, how to find number of times the string WiFi occured in a file?
+why threads are needed? how to start threads?
+how do you plan and automate a omnipeak sniffer if there is no library?
+
+=========================================================================================================

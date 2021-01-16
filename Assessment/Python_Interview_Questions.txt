@@ -1,9 +1,20 @@
-differentiate break, continue and pss
+list comprehension?
+dictionary comprehension?
 list vs tuple (memory management)
+differentiate break, continue and pass
 
-what is cunstructor and destructor?
+what is lamda, map and filter?
+
+
+what is constructor and destructor?
 what is __init__ ?
 why __main__ ?
-what is lamda, map and filter?
-string slicing possible? if so what happens to original string? (immutable)
-object vs variable?
+What is a class and instance?
+    A class is a blueprint that is needed to make an object(= instance). The difference between an object and an instance is, an object is a thing and an instance is a relation. In other words, instance describes the relation of an object to the class that the object was made from.
+
+regular/instance method vs class method vs static method?
+instance variable vs class variable?
+
+What is alternative constructor using class method?
+    create class method using decorator(it should return class object after class method is executed) and call it while instantiating python class
+

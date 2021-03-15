@@ -1,0 +1,13 @@
+STP:
+    1.Selecting root bridge based on the bridge ID (Priority+mac of switch)
+        bridge ID is obtained from bpdu packets which will be exchanged between switches every 2 seconds
+        Every LAN will have only one root bridge and all remaining switches will be non-root bridges
+    2.Selecting root port for all other switches based on following parameters for getting shortest path to root bridge
+        least cost(speed)
+        lowest forwarding switch id (priority+mac)
+        lowest forwarding switch port
+        -For every non-root bridge there is only one root port
+    3.Selecting desginated and non-designated ports
+        -All ports in root bridge will be in forwarding state
+        -All root ports willbe in forwarding state
+        -Need to decide non-root ports as a blocking or forwarding based on the similar conditions as in step 2 (cost may be same) It takes 30 seconds to decide blocking ot forwading state as the listening and learning will take time

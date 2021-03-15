@@ -1,6 +1,9 @@
 list comprehension?
 dictionary comprehension?
 list vs tuple (memory management)
+why generator
+why decorator
+generator vs iterator
 differentiate break, continue and pass
 
 what is __init__ ?

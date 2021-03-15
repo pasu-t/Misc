@@ -17,7 +17,7 @@ instance variable vs class variable?
 What is alternative constructor using class method?
     create class method using decorator(it should return class object after class method is executed) and call it while instantiating python class
 
-input=pasupathi, output=pasupathi
+input=pasupathi, output=pAsUpAtHi
 input= [1,2,3,1,4,5,2,7,4,1,5,8,9] output; dictionary containing repeated element and value as howm many times repeated
 regular expession matching NIC interface status, mac, ip etc
 

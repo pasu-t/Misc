@@ -1,0 +1,39 @@
+courses:
+  course: "django"
+  version: 1.5
+  price: &myprice 199
+  is_public: true
+  release_date: 2021-04-25 09:54:11
+  pre_enroll: null
+  tags:
+    - python
+    - web dev
+    - mysql
+  course_ta: ["pasupathi", "rakesh", "temp"]
+  ta_details:
+    - name: "pasupathi"
+      email: "p.test@gmail.com"
+      role: "content"
+    - name: "temp"
+      email: "temp@gmail.com"
+      role: "discussion admin"
+    - {name: "rakesh", email: "rakesh@gmail.com", role: "devops"}
+
+short_desc: >
+  here is a short
+  description for django course
+  Stored as single line
+
+long_desc: |
+  now we can store 
+  all indentations and 
+   related thins
+
+process_payment: *myprice
+
+adv: &adv
+  mykey: myvalue
+
+another_adv: 
+  one: two
+  <<: *adv

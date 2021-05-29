@@ -1,1 +1,4 @@
-[ {"gmail": {"id" : "test.pasupathi@gmail.com", "password" : "test@321"}} ]
+{
+    "gmail": {"id" : "test.pasupathi@gmail.com", "password" : "test@321"},
+    "docker": {"id" : "pashu", "password" : "win@21"}
+}

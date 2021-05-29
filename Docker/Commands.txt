@@ -1,0 +1,22 @@
+docker pull <image>
+docker run <image>
+docker ps
+docker ps --all
+docker start <container>
+docker stop <container>
+docker kill <container>
+
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+    --detach , -d       Detached mode: run command in the background
+    --detach-keys       Override the key sequence for detaching a container
+    --env , -e      API 1.25+
+    Set environment variables
+    --env-file      API 1.25+
+    Read in a file of environment variables
+    --interactive , -i      Keep STDIN open even if not attached
+    --privileged        Give extended privileges to the command
+    --tty , -t      Allocate a pseudo-TTY
+    --user , -u     Username or UID (format: <name|uid>[:<group|gid>])
+
+most used:
+docker exec -it <container> bash

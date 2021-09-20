@@ -1,0 +1,9 @@
+docker network create -d macvlan \
+  --subnet=172.16.86.0/24 \
+  --gateway=172.16.86.1 \
+  --aux-address="my-router=192.168.32.129" \
+  -o parent=eth0 \
+  my-macvlan-net
+ 
+ docker network ls
+ docker network inspect my-macvlan-net

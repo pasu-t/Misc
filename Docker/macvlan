@@ -21,8 +21,6 @@ docker network create -d macvlan \
  
  docker exec my-8021q-macvlan-net ip addr show eth0
  docker exec my-8021q-macvlan-net ip route 
- 
- 
 
  docker network ls
  docker network inspect my-macvlan-net

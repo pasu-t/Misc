@@ -1,1 +1,2 @@
-source mac, dest mac and target MAC, target IP address in ARP request and ARP response packets?
+1. source mac, dest mac and target MAC, target IP address in ARP request and ARP response packets?
+2. what is thin client and thick client

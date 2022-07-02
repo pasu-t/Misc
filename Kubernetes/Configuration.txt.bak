@@ -1,0 +1,29 @@
+Kubernetes can be installed using different cluster configurations. The major installation types are described below:
+
+All-in-One Single-Node Installation
+	In this setup, all the control plane and worker components are installed and running on a single-node. While it is useful for learning, development, and testing, it is not recommended for production purposes.
+Single-Control Plane and Multi-Worker Installation
+	In this setup, we have a single-control plane node running a stacked etcd instance. Multiple worker nodes can be managed by the control plane node.
+Single-Control Plane with Single-Node etcd, and Multi-Worker Installation
+	In this setup, we have a single-control plane node with an external etcd instance. Multiple worker nodes can be managed by the control plane node.
+Multi-Control Plane and Multi-Worker Installation
+	In this setup, we have multiple control plane nodes configured for High-Availability (HA), with each control plane node running a stacked etcd instance. The etcd instances are also configured in an HA etcd cluster and, multiple worker nodes can be managed by the HA control plane.
+Multi-Control Plane with Multi-Node etcd, and Multi-Worker Installation
+	In this setup, we have multiple control plane nodes configured in HA mode, with each control plane node paired with an external etcd instance. The external etcd instances are also configured in an HA etcd cluster, and multiple worker nodes can be managed by the HA control plane. This is the most advanced cluster configuration recommended for production environments. 
+
+Installing Local Learning Clusters:
+
+There are a variety of installation tools allowing us to deploy single- or multi-node Kubernetes clusters on our workstations, for learning and development purposes. While not an exhaustive list, below we enumerate a few popular ones:
+
+Minikube 
+Single- and multi-node local Kubernetes cluster, recommended for a learning environment deployed on a single host.
+Kind 
+	Multi-node Kubernetes cluster deployed in Docker containers acting as Kubernetes nodes, recommended for a learning environment.
+Docker Desktop 
+	Including a local Kubernetes cluster for Docker users. 
+MicroK8s 
+	Local and cloud Kubernetes cluster for developers and production, from Canonical.
+K3S 
+	Lightweight Kubernetes cluster for local, cloud, edge, IoT deployments, originally from Rancher, currently a CNCF project.
+Minikube is an easy and flexible method to create a local Kubernetes setup. We will be using it extensively in this course to manage certain aspects of a Kubernetes cluster, while taking advantage of several automated features designed to simplify the user interaction with the Kubernetes environment and the containerized applications deployed to the cluster
+Installing Local Learning Clusters:

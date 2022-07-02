@@ -1,0 +1,25 @@
+==============================interface isolation==========================
+sudo ip route add local 10.10.1.1/32 dev ens192 table 10 proto kernel scope host src 10.10.1.1
+sudo ip route add local 10.10.2.1/32 dev ens224 table 10 proto kernel scope host src 10.10.2.1
+sudo ip route del local 10.10.1.1/32 dev ens192 table local scope host
+sudo ip route del local 10.10.2.1/32 dev ens224 table local scope host
+sudo ip route add 10.10.2.0/24 dev ens192 table 20
+sudo ip route add 10.10.1.0/24 dev ens224 table 20
+
+sudo ip rule add to 10.10.1.1/32 table 10 priority 77
+sudo ip rule add to 10.10.2.1/32 table 10 priority 77
+sudo ip rule add to 10.10.1.0/24 table 20 iif lo priority 55
+sudo ip rule add to 10.10.2.0/24 table 20 iif lo priority 55
+
+==================================================restore=======================================================
+sudo ip route del local 10.10.1.1/32 dev ens192 table 10 proto kernel scope host src 10.10.1.1
+sudo ip route del local 10.10.2.1/32 dev ens224 table 10 proto kernel scope host src 10.10.2.1
+sudo ip route add local 10.10.1.1/32 dev ens192 table local scope host
+sudo ip route add local 10.10.2.1/32 dev ens224 table local scope host
+sudo ip route del 10.10.2.0/24 dev ens192 table 20
+sudo ip route del 10.10.1.0/24 dev ens224 table 20
+
+sudo ip rule del to 10.10.1.1/32 table 10 priority 77
+sudo ip rule del to 10.10.2.1/32 table 10 priority 77
+sudo ip rule del to 10.10.1.0/24 table 20 iif lo priority 55
+sudo ip rule del to 10.10.2.0/24 table 20 iif lo priority 55

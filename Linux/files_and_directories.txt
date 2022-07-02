@@ -4,10 +4,6 @@ cd \ -> to the heighest heirarcy level of file system
 
 touch .file -> create hidden file
 
-find / -type d -name "apt" 
-find /dir/path/look/up -name "dir-name-here" -print
-find /dir/path/look/up -name "dir-name-here"
-
 #oldest file in var/log
 ls -lAt var/log
 #largest file in var/log

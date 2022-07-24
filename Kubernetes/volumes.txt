@@ -1,0 +1,26 @@
+who creates persistant volumes and when?
+	k8s Admin setsup and maintains the cluster
+	k8s User deploys applications in cluster
+	Admin provisions storage resource
+	User creates claim to PV, no need to worry about where actually data is stored, all he wants is data is safely stored
+
+-> pod requests the volume through pvc
+-> claims tries to find a volume in cluster
+-> claims must be in the same namespace
+
+
+local volume types violates 
+	not being tied to each specific node
+	surviving cluster crashes
+
+ConfigMap and Secret are local volumes and not created via PV and PVC
+
+Storage Class(3rd part k8s component):
+	abstracts underlying storage provider and parameters for that storage
+	SC provisions persistent volumes dynamically when pvc claims it
+	StorageBackend is defined in the SC component via provisioner attribute
+	each storage backend has own provisioner
+	internal provisioner - "kubernetes.io"
+
+
+

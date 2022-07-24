@@ -1,0 +1,18 @@
+tmux new -s <session-name>
+tmux ls
+tmux attach -t <session-name>
+tmux rename-session -t session-name new-session-name
+tmux detach -t <session-name> or tmux detach or Ctrl + b and then press D
+exit -> (all the information in the current session will be lost)
+tmux kill-session -t <session-name>
+To kill all sessions: tmux kill-server
+
+Select Windows: Ctrl + b + window id
+
+
+
+Ctrl+b c Create a new window (with shell)
+Ctrl+b w Choose window from a list.
+Ctrl+b 0 Switch to window 0 (by number )
+Ctrl+b , Rename the current window.
+Ctrl+b % Split current pane horizontally into two panes.

@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: myfrontend
+      image: nginx
+      VolumeMounts:
+      - mountPath: "/var/www/html"
+        name: mypd
+  storageClassName: manual
+  volumeMode: Filesystem
+  accessModes:
+    ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi

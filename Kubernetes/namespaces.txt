@@ -1,0 +1,24 @@
+- Organise resources in namespaces
+- Virtual cluster inside a cluster
+- Some examples:
+	kebernetes-dashboard : only with minikube
+	kube-system : (do not create or modify) system processes , master and kubectl processes
+	kube-public: publicly accessible data, a configmap which contains cluster information
+	kube-node-lease: hearbeats of node, each node has associated lease object in namespace, determines the availability of node
+	default: resources you create are located here
+- Usecases
+	may not be useful for small projects, go for default namespace in such case
+	stucture your components
+	avoid conflicts: when many teams , same application (each tean to get own namespace)
+	Resource sharing between different environments: ex:staging and development
+	Access and resource limits on namespaces level
+- Characteristics
+	you can't access most resources from another namespace
+	access service in another namespace(ex database namespace)
+		data:
+			db_url: mysql-service.database
+	components like vol, node cannot be isolated in namspaces as they are global to cluster
+
+-Change Active namespace
+	instead of using -n my-namespace for every kubectl command, go for kubens tool to switch active namespace (`kubectx will install kubens)
+	

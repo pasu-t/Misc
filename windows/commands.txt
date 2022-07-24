@@ -1,3 +1,5 @@
+doskey /history
+
 #to get listening processes
  C:\> netstat -a -b
 	(Add -n to stop it trying to resolve hostnames, which will make it a lot faster.)

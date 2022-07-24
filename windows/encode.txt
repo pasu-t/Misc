@@ -1,0 +1,2 @@
+powershell "[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes(\"username\"))"
+powershell "[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes(\"password\"))"

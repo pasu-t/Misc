@@ -1,0 +1,10 @@
+tmux new -s <session-name>
+tmux ls
+tmux attach -t <session-name>
+tmux rename-session -t session-name new-session-name
+tmux detach -t <session-name> or tmux detach or Ctrl + b and then press D
+exit -> (all the information in the current session will be lost)
+tmux kill-session -t <session-name>
+To kill all sessions: tmux kill-server
+
+Select Windows: Ctrl + b + window id

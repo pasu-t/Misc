@@ -1,0 +1,21 @@
+doskey /history
+############################# minikube
+minikube --memory 4096 --cpus 2 start
+minikube addons enable ingress
+kubectl get pods
+kubectl get pods -n kube-system
+
+############################# deploy nginx with yml
+kubectl apply -f templates\nginx-deployment.yaml
+kubectl get deployment
+kubectl apply -f templates\nginx-service.yaml
+kubectl get service
+kubectl describe deployment nginx-deployment
+kubectl describe service nginx-service
+kubectl get pod -o wide
+kubectl get deployment nginx-deployment -o yaml
+
+kubectl delete -f templates\nginx-deployment.yaml
+kubectl get deployment
+kubectl delete -f templates\nginx-service.yaml
+kubectl get service

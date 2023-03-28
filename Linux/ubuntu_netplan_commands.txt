@@ -1,0 +1,18 @@
+sudo vi /etc/netplan/00-installer-config.yaml .
+
+network:
+  ethernets:
+    ens160:
+      dhcp4: false
+      addresses: [10.218.29.100/25]
+      routes:
+        - to: default
+          via: 10.218.29.126
+      nameservers:
+        addresses: [8.8.8.8]
+    ens192:
+      addresses: [10.90.38.100/24]
+  version: 2
+
+sudo netplan generate
+sudo netplan apply

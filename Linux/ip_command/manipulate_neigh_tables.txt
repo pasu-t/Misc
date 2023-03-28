@@ -1,0 +1,5 @@
+ip -6 neigh add <IPv6 address> lladdr <link-layer address> dev <device>
+ip -6 neigh del <IPv6 address> lladdr <link-layer address> dev <device>
+ex:
+ip -6 neigh add fec0::1 lladdr 02:01:02:03:04:05 dev eth0
+ip -6 neigh del fec0::1 lladdr 02:01:02:03:04:05 dev eth0

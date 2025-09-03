@@ -17,6 +17,13 @@ how voice gets prioratized over other?
 when SIFS is used? what is AIFS?
 for what features you have written testplans?
 
+Extreme Networks"
+@first round
+legacy vs wmm-ps
+how AP will switch the channel when radar is detected? client disconnects?
+
+
+
 Python:
 using with context manager, file reading, how to find number of times the string WiFi occured in a file?
 why threads are needed? how to start threads?

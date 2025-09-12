@@ -1,0 +1,57 @@
+# Write a function that takes a list of strings and returns a dictionary where keys are the strings and values are their frequencies. Handle edge cases like empty lists and None values.
+
+# def count_frequencies(items):
+#     result = {}
+#     if items is None:
+#         return None
+#     if len(items) == 0:
+#         return None
+#     if type(items) != list:
+#         return None
+#     for item in items:
+#         if item not in result.keys():
+#             result[item] = items.count(item)
+#     return result
+
+# output = count_frequencies(['a', 'a', 'a'])
+# print(output)
+
+# You are given a function normalize_variable_name that takes an arbitrary string and returns a valid Python variable name based on the following rules:
+# Invalid characters are replaced with underscores.
+# Leading characters must be valid for Python variables (letters or underscore).
+# If the string starts with a digit, prepend an underscore.
+# Multiple consecutive invalid characters are collapsed into a single underscore.
+# The result is in lowercase.
+# Your task is to write a set of unit tests for this function using Python’s unittest framework.
+ 
+import re
+ 
+def normalize_variable_name(name: str) -> str:
+    name = name.strip().lower()
+    name = re.sub(r'[^0-9a-zA-Z_]', '_', name)
+    name = re.sub(r'_+', '_', name)
+    if name and name[0].isdigit():
+        name = '_' + name
+    return name
+
+
+import pytest
+
+#test name with invalid characters
+#test name starting with letters or underscore
+#test name starting with a digit
+#test name with consecutive invalid characters
+
+@pytest.mark.parametrize("name, expected", [
+    ("8setvar", "_8setvar"),
+    ("%^&&setvar", "_setvar"),
+    ("SetVar", "setvar"),
+    ("set$^&va#r", "set_va_r"),
+    ("set8var8", "set8var8"),
+    ("88888", "_88888"),
+    ("set8var^&*", "set8var_")])
+def test_name_with_invalid_chars(name, expected):
+    assert normalize_variable_name(name) == expected
+
+
+

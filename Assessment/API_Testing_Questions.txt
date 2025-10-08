@@ -1,0 +1,29 @@
+API testing
+1. Basics of API, purpose and structure
+2. Common methods of API and common tools (postman, RestAssured, Curl)
+3. Types of API testing - Functional, performance, security and compatibility 
+4. An API is returning a 500 Internal server error. How would you debug this issue
+    - [ ] Verify issue persists
+    - [ ] Verify if API works with different inputs
+    - [ ] If there is access to logs then verify Stack traces or database errors
+    - [ ] Verify API in different environments (QA, Staging and Production)
+    - [ ] Discuss with development team to debug further
+5. How to test REST, SOAP APIs and how to handle JSON and CML responses
+6. Best practices for API testing - refer testing pyramid- shiftleft
+7. Challenges faced and overcome
+8. How do you handle dynamic values in API responses like timestamps, session tokens etc
+    - [ ] Extract the dynamic values using JSONPath or XPath instead of hardcoding
+    - [ ] If the API returns timestamp, I’d compare it within a valid time range rather than an exact match
+    - [ ] For session tokens, I’d store them in variables in postman or my automation framework to reuse in subsequent requests
+9. How would you test API security vulnerabilities 
+    - [ ] Perform access tests by removing auth headers
+    - [ ] Test SQL injection by sending SQL commands in input fields
+    - [ ] Check for sensitive data exposure by analyzing API responses for info like password or API Keys
+    - [ ] Validate API against Cross-Site Scripting(XSS) and Cross-Site Request Forgery (CSRF) attacks
+10. How do you test API that processes large amounts of data?
+    - [ ] Send large payloads 
+    - [ ] Test for timeout issues when processing big datasets
+    - [ ] Analyze memory usage and potential server crashes using tools like JMeter 
+    - [ ] Check if data processing completes within the expected time and verify data integrity
+11. z
+

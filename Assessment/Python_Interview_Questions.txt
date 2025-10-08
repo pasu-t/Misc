@@ -1,0 +1,43 @@
+Python
+Intermediate
+1. Factorial of number
+2. Length of last word in a string
+3. can you capitalize alternative letter of your name
+4. input= [1,2,3,1,4,5,2,7,4,1,5,8,9] ,output; dictionary containing repeated element and value as howm many times repeated
+5. what is the output , explain the difference between list and tuple
+	t = (10,20,[30,40],70,80) 
+	t[2].append(50)
+	print(t)
+6. Dictionary and list comprenesion
+7. Context managers
+    - [ ] Class based context manager (__enter__(self), __exit__(self, exec_type,exec_val,exec_tb))
+    - [ ] Context lib-based context manager
+    - [ ] 
+8. 
+9. 
+Expert
+1. newlist = [("cherry",5), ("orange",19), ("banana",32), ("apple", 10)] , sort this list based on quantity
+2. Explain * args and **kwargs
+3. Decorators with example
+4. What is GIL? How does it affect multithreading in Python and what strategies an be used to achieve true parallelism for CPU-bound tasks
+    - [ ] Multiprocessing module: module spawns separate python process, each with its own python interpreter and memory space and thus runs its own GIL. This leverages multiple CPU cores
+    - [ ] Concurrent.futures using ProcessPoolExectutor 
+    - [ ] Purest-xdist
+5. Walk me through how you would structure a test automation framework from scratch using python
+6. OOPS
+    - [ ] What is metaclasses, any practical use case
+    - [ ] What are Descriptors? How do they work and what are differences between __get__, __set__, __delete__ ? Provide an example of practical application
+    - [ ] What is the purpose of __slots__ attribute in a Python class? What are main benefits and potential drawbacks?
+7. Explain the different between async def and a regular def function. 
+    - [ ] What is an await able and name three main types. (Coroutines, tasks and futures)
+    - [ ] How does asyncio achive concurrency?
+8. How would you modify the behavior of a class after it has been defined without changing its source code directly (name and explain at least two techniques )
+    - [ ] Answer: Monkey patching 
+        - [ ] Techniquie 1: adding or replacing methods
+        - [ ] Technique 2: Using decorators
+        - [ ] Other: Class decorators, subclassing 
+9. Explain how Pythons garbage collector works, what is generational GC
+10. What is the Method Resolution Order (MRO) in python
+
+
+

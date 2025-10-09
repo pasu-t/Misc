@@ -3,7 +3,8 @@ Intermediate
 1. Factorial of number
 2. Length of last word in a string
 3. can you capitalize alternative letter of your name
-4. input= [1,2,3,1,4,5,2,7,4,1,5,8,9] ,output; dictionary containing repeated element and value as howm many times repeated
+4. input= [1,2,3,1,4,5,2,7,4,1,5,8,9]
+	output: dictionary containing repeated element and value as how many times repeated
 5. what is the output , explain the difference between list and tuple
 	t = (10,20,[30,40],70,80) 
 	t[2].append(50)
